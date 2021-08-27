@@ -11,7 +11,7 @@ public class Run {
         System.out.println("Chu vi tam giac: " + cv);
 
         int s = tg.dienTichTamGiac();
-        System.out.println("Diện tích tam giác: "+ s)
+        System.out.println("Diện tích tam giác: "+ s);
 
         DonThuc dt = new DonThuc();
         dt.input();
