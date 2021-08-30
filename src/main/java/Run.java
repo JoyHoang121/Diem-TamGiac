@@ -1,20 +1,32 @@
-import entities.DonThuc;
+import entities.Diem;
 import entities.TamGiac;
+
+import java.sql.SQLOutput;
 
 public class Run {
     public static void main(String[] args) {
-        TamGiac tg=new TamGiac();
-        tg.input();
-        tg.print();
+//        TamGiac tg = new TamGiac();
+//        System.out.println(tg);
+//
+//        System.out.println("Chu vi tam giac: " + tg.chuViTamGiac());
+//
+//        System.out.println("Diện tích tam giác: "+ tg.dienTichTamGiac());
 
-        int cv = tg.chuViTamGiac();
-        System.out.println("Chu vi tam giac: " + cv);
+        Diem d1 = new Diem();
+        System.out.println(d1);
 
-        int s = tg.dienTichTamGiac();
-        System.out.println("Diện tích tam giác: "+ s);
+        Diem d2 = new Diem();
+        d2.setX(3);
+        d2.setY(6);
+        System.out.println(d2);
 
-        DonThuc dt = new DonThuc();
-        dt.input();
-        dt.print();
+
+        Diem d3 = new Diem(-2, 4);
+        System.out.println(d3);
+        System.out.println(d3.findCentralSymmetry());
+       // double a = d1.distanceArea(d2);
+       // System.out.println(a);
+
+
     }
 }

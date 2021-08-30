@@ -3,37 +3,46 @@ package entities;
 import java.util.Scanner;
 
 public class TamGiac {
+    private Diem d1, d2, d3;
 
-    private int a;
-    private int b;
-    private int c;
-    private int h;
-
-
-    public void input() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Mời nhập cạnh a: ");
-        this.a = sc.nextInt();
-        System.out.print("Mời nhập cạnh b: ");
-        this.b = sc.nextInt();
-        System.out.print("Mời nhập cạnh c: ");
-        this.c = sc.nextInt();
-        System.out.print("Mời nhập chiều cao h: ");
-        this.h = sc.nextInt();
+    public TamGiac(Diem d1, Diem d2, Diem d3) {
+        this.d1 = d1;
+        this.d2 = d2;
+        this.d3 = d3;
     }
 
-    public void print() {
-        System.out.println("Các cạnh tam giác");
-        System.out.format("%5d%5d%5d \n", this.a, this.b, this.c);
+    public TamGiac() {
+        this.d1 = Diem.generate();
+        this.d2 = Diem.generate();
+        this.d3 = Diem.generate();
     }
 
-    public int chuViTamGiac() {
-        int p = this.a + this.b + this.c;
-        return p;
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("TamGiac{\n");
+        sb
+                .append(" d1 = ").append("{").append(d1.getX()).append(",").append(d1.getY()).append("}").append("\n")
+                .append(" d2 = ").append("{").append(d2.getX()).append(",").append(d1.getY()).append("}").append("\n")
+                .append(" d3 = ").append("{").append(d3.getX()).append(",").append(d1.getY()).append("}").append("\n")
+                .append('}');
+        return sb.toString();
     }
 
-    public int dienTichTamGiac() {
-        int s = (this.h * this.a) / 2;
-        return s;
+    public double chuViTamGiac() {
+        double a = this.d1.distance(d2);
+        double b = this.d1.distance(d3);
+        double c = this.d2.distance(d3);
+        return a + b + c;
     }
+
+    public double dienTichTamGiac() {
+        double a = this.d1.distance(d2);
+        double b = this.d1.distance(d3);
+        double c = this.d2.distance(d3);
+        double p = a + b + c;
+        return Math.sqrt(p *(p-a)*(p-b)*(p-c));
+    }
+
+
 }
