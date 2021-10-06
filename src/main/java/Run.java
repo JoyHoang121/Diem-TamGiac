@@ -5,7 +5,7 @@ import java.sql.SQLOutput;
 
 public class Run {
     public static void main(String[] args) {
-//        TamGiac tg = new TamGiac();
+        TamGiac tg = new TamGiac();
 //        System.out.println(tg);
 //
 //        System.out.println("Chu vi tam giac: " + tg.chuViTamGiac());
@@ -20,6 +20,7 @@ public class Run {
         d2.setY(6);
         System.out.println(d2);
 
+       // tg.input((1,4),(2,8),(0,4));
 
         Diem d3 = new Diem(-2, 4);
         System.out.println(d3);
