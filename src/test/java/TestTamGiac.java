@@ -1,18 +1,19 @@
 import entities.Diem;
 import entities.TamGiac;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestTamGiac {
+@DisplayName("Class Tam Giac")
+ class TestTamGiac {
 
     TamGiac tg = new TamGiac();
 
     @Test
-    @DisplayName("Nên làm tam giác vuông cân")
-    public void tamGiacVuong() {
+    @DisplayName("Nên là tam giác vuông cân")
+     void tamGiacVuong() {
         Diem d1 = new Diem(0, 0);
         Diem d2 = new Diem(0, 3);
         Diem d3 = new Diem(4, 0);
@@ -26,7 +27,7 @@ public class TestTamGiac {
 
     @Test
     @DisplayName("Tính chu vu tam giac vuông cân")
-    public void chuViTamGiacVuongCan() {
+     void chuViTamGiacVuongCan() {
         Diem d1 = new Diem(0, 0);
         Diem d2 = new Diem(0, 1);
         Diem d3 = new Diem(1, 0);
