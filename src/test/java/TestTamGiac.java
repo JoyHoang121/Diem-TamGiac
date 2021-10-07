@@ -33,9 +33,23 @@ import static org.junit.jupiter.api.Assertions.*;
         Diem d3 = new Diem(1, 0);
         tg = new TamGiac(d1, d2, d3);
 
-        double expectedResult = 3.4;
-        double actualResult = Math.round(tg.chuViTamGiac() * 10) / 10.0;
+        double expectedResult = 3.414213562373095;
+        double actualResult =tg.chuViTamGiac();
         assertEquals(expectedResult, actualResult);
 
     }
+
+   @Test
+   @DisplayName("Gía trị trả về nên là 0")
+   void testTamGiac() {
+      Diem d1 = new Diem(3, 2);
+      Diem d2 = new Diem(0, 2);
+      Diem d3 = new Diem(0, 3);
+      tg = new TamGiac(d1, d2, d3);
+
+      double expectedResult = 7.2;
+      double actualResult = Math.round(tg.chuViTamGiac() * 10) / 10.0;
+      assertEquals(expectedResult, actualResult);
+
+   }
 }

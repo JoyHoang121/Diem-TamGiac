@@ -30,9 +30,9 @@ public class TamGiac {
     }
 
     public double chuViTamGiac() {
-        double a = this.d1.distance(d2);
-        double b = this.d1.distance(d3);
-        double c = this.d2.distance(d3);
+        double a = this.d1.distanceArea(d2);
+        double b = this.d1.distanceArea(d3);
+        double c = this.d2.distanceArea(d3);
         return a + b + c;
     }
 
